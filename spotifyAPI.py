@@ -32,6 +32,7 @@ def search(newq):
             if (blackword in name ):
                 ifContainBlackword = True 
                 break
+        # if the name does not contain blacklist words 
         if (ifContainBlackword == False):
             return ( (playlist['name']), playlist['images'][0]['url'] )
             # if managed to print out one -> terminate 
