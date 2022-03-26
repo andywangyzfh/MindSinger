@@ -12,5 +12,9 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     text = request.form['input-text']
-    search(text)
-    return 'You entered: {}'.format(text)
+    name, img, uri, sp = search(text)
+    uriCompact = uri
+    uriCompact = uri.replace("spotify:playlist:", "")
+    # search(text)
+    # return 'You entered: {}'.format(text)
+    return render_template('playsong.html', emotion=text, link=uriCompact)
