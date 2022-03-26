@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
-from spotifyAPI import search
+from spotifyAPI import search, play, pause
+import spotipy
 
 app = Flask(__name__)
 
