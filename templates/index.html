@@ -28,15 +28,18 @@
 
     <!-- Text Input -->
     <div class="form-group text-input">
-      <label for="exampleFormControlTextarea1 my-2">Input text:</label>
-      <textarea
-        class="form-control my-2"
-        id="exampleFormControlTextarea1"
-        rows="3"
-      ></textarea>
-      <button type="submit" class="btn btn-primary my-3">
-        Give me a song!
-      </button>
+      <form action="submit" method="post">
+        <label for="exampleFormControlTextarea1 my-2">Input text:</label>
+        <textarea
+          class="form-control my-2"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          name="input-text"
+        ></textarea>
+        <button type="submit" class="btn btn-primary my-3">
+          Give me a song!
+        </button>
+      </form>
     </div>
   </body>
   <script
