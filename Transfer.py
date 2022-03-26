@@ -30,7 +30,7 @@ def transfer(text):
     result=""
     for w in lemma_word:
         result=result+w+" "
-    pipe=joblib.load('pipe.pkl')
+    pipe=joblib.load('model.pkl')
     res=''
     return res.join(pipe.predict([result]))
     
