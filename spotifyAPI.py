@@ -48,17 +48,17 @@ def search(newq):
                 ifContainBlackword = True 
                 break
         # if the name does not contain blacklist words 
-        if (ifContainBlackword == False):
-            return ( (playlist['name']), playlist['images'][0]['url'], playlist['uri'] )
+        if (ifContainBlackword == False): 
+            return ( (playlist['name']), playlist['images'][0]['url'], playlist['uri'], sp )
 # res = search('sad')
 # print(res)
-# search('happy')
+# res = search('happy')
+# print(res)
 
-def play(): 
+def play(uri): 
     sp = connect() 
     # Change track
-    # TODO change to a arbitory track in the mood playlist 
-    sp.start_playback(uris=['spotify:track:6gdLoMygLsgktydTQ71b15'])
+    sp.start_playback(context_uri=str(uri))
     return 
 
 def pause(): 
@@ -71,4 +71,6 @@ def pause():
     return 
 
 # pause()
-# play()
+# resUri = search('happy')[2]
+# print(resUri)
+# play(resUri )
