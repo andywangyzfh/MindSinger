@@ -1,8 +1,6 @@
 import spotipy
-
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy.oauth2 import SpotifyClientCredentials
-
 
 def search(newq): 
     '''
@@ -11,7 +9,6 @@ def search(newq):
     Return 
     - tuple type, (<name of the playlist>, <image url>)
     '''
-
     q = str(newq)
 
     auth_manager = SpotifyClientCredentials(client_id='c0852b805bac480aa7ae57f125629e7a',
@@ -35,6 +32,7 @@ def search(newq):
             if (blackword in name ):
                 ifContainBlackword = True 
                 break
+        # if the name does not contain blacklist words 
         if (ifContainBlackword == False):
             return ( (playlist['name']), playlist['images'][0]['url'] )
             # if managed to print out one -> terminate 
