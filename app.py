@@ -18,4 +18,4 @@ def submit():
     uriCompact = uri.replace("spotify:playlist:", "")
     # search(text)
     # return 'You entered: {}'.format(text)
-    return render_template('playsong.html')
+    return render_template('playsong.html', emotion=text, link=uriCompact)
