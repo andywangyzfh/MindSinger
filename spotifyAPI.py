@@ -26,7 +26,7 @@ def search(newq):
     Parameter
     - q: the string we want to search (e.g. 'sad')
     Return 
-    - tuple type, (<name of the playlist>, <image url>)
+    - tuple type, (<name of the playlist>, <image url>, <playlist uri>)
     '''
     q = str(newq)
 
@@ -49,9 +49,7 @@ def search(newq):
                 break
         # if the name does not contain blacklist words 
         if (ifContainBlackword == False):
-            return ( (playlist['name']), playlist['images'][0]['url'] )
-            # if managed to print out one -> terminate 
-            break 
+            return ( (playlist['name']), playlist['images'][0]['url'], playlist['uri'] )
 # res = search('sad')
 # print(res)
 # search('happy')
@@ -73,4 +71,4 @@ def pause():
     return 
 
 # pause()
-play()
+# play()
