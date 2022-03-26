@@ -1,0 +1,18 @@
+.text-input {
+  width: 60%;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 50;
+}
+p {
+  padding: 5 5;
+}
+label {
+  padding: 5 5;
+}
+
+button {
+  margin: 10 10 10 10;
+}
