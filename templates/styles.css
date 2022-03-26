@@ -3,13 +3,22 @@
   margin: 0 auto;
 }
 
+body {
+  background-color: #FDF6EC;
+}
+
 h1 {
   padding: 50;
+  color: #BB9981;
 }
+
 p {
   padding: 5 5;
+  color: #534340;
 }
+
 label {
+  color: #534340;
   padding: 5 5;
 }
 
