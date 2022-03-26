@@ -35,7 +35,8 @@ def search(newq):
         if (ifContainBlackword == False):
             return ( (playlist['name']), playlist['images'][0]['url'] )
             # if managed to print out one -> terminate 
+            break 
 
-res = search('sad')
-print(res)
+# res = search('sad')
+# print(res)
 # search('happy')
