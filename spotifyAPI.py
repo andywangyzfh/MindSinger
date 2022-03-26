@@ -11,11 +11,11 @@ def search(newq):
     Return 
     - tuple type, (<name of the playlist>, <image url>)
     '''
-    q = str() 
+
     q = str(newq)
 
-    auth_manager = SpotifyClientCredentials(client_id= 'c0852b805bac480aa7ae57f125629e7a', \
-        client_secret= '156ea9da4b0245aebe02b7c84da0826a')
+    auth_manager = SpotifyClientCredentials(client_id='c0852b805bac480aa7ae57f125629e7a',
+                                            client_secret='156ea9da4b0245aebe02b7c84da0826a')
     # scope = "user-library-read"
     sp = spotipy.Spotify(auth_manager=auth_manager)
 
@@ -43,6 +43,3 @@ def search(newq):
 # res = search('sad')
 # print(res)
 # search('happy')
-
-
-        
