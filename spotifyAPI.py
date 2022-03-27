@@ -52,7 +52,7 @@ def search(newq):
         if (ifContainBlackword == False): 
             candidate.append( ((playlist['name']), playlist['images'][0]['url'], playlist['uri'], sp ))
 
-    rand = random.randint(0, len(candidate))
+    rand = random.randint(0, len(candidate)-1)
     return candidate[rand] 
 
 # res = search('sad')
