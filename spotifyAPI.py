@@ -2,6 +2,7 @@ from ast import Try
 from http import client
 from logging import exception
 import spotipy
+import random
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy.oauth2 import SpotifyClientCredentials
 
@@ -38,7 +39,8 @@ def search(newq):
 
     ifContainBlackword = False
 
-    for i in range(len(items)): 
+    candidate = [] 
+    for i in range( min(len(items), 50) ): 
         playlist = items[i]
         name = playlist['name'] 
         
@@ -46,10 +48,13 @@ def search(newq):
             # if the name contains blackword, just skip to the next playlist 
             if (blackword in name ):
                 ifContainBlackword = True 
-                break
         # if the name does not contain blacklist words 
         if (ifContainBlackword == False): 
-            return ( (playlist['name']), playlist['images'][0]['url'], playlist['uri'], sp )
+            candidate.append( ((playlist['name']), playlist['images'][0]['url'], playlist['uri'], sp ))
+
+    rand = random.randint(0, len(candidate))
+    return candidate[rand] 
+
 # res = search('sad')
 # print(res)
 # res = search('happy')
