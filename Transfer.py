@@ -1,9 +1,14 @@
-from sklearn.externals import joblib
+import joblib
 import nltk
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import _logistic
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
+from sklearn.linear_model import SGDRegressor 
+
+model_SGDRegressor=SGDRegressor()
 
 def transfer(text):
     stop_words=set(stopwords.words('english'))

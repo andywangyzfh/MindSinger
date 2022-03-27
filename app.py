@@ -15,7 +15,7 @@ def index():
 def submit():
     text = request.form['input-text']
     emo = transfer(text)
-    name, img, uri, sp = search(text)
+    name, img, uri, sp = search(emo)
     uriCompact = uri
     uriCompact = uri.replace("spotify:playlist:", "")
     # search(text)
