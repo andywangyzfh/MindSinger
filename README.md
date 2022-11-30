@@ -1,6 +1,8 @@
 # MindSinger
 A smart Spotify song recommender to enhance your reading experience
 
+Demo can be found [here](https://devpost.com/software/mindsinger).
+
 ## Usage
 Install prerequisites: execute `pip3 install --user nlpk flask spotipy scikit-learn`.  
 Go to the root level and execute `flask run`.
